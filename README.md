@@ -1,6 +1,6 @@
 # student_management_system
 
-A simple Student Management System web application built using
+A simple Student Management System web application built using:
 
     1. Spring Boot
     2. Spring MVC
@@ -11,7 +11,7 @@ A simple Student Management System web application built using
     7. MySQL
     
     
-Opeartion that can be performed
+Opeartion that can be performed:
 
     1. Create the student (C)
     2. Read the student (R)
@@ -19,7 +19,7 @@ Opeartion that can be performed
     4. Delete the student (D)
     
     
-Information about the student
+Information about the student:
 
     1. First Name
     2. Last Name

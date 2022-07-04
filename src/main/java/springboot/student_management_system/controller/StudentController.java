@@ -2,11 +2,15 @@ package springboot.student_management_system.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import springboot.student_management_system.entity.Student;
 import springboot.student_management_system.service.StudentService;
 
-import java.util.List;
+import javax.validation.Valid;
 
 @Controller
 public class StudentController {
@@ -30,7 +34,11 @@ public class StudentController {
     }
 
     @PostMapping("students")
-    public String saveStudent(@ModelAttribute Student student){
+    public String saveStudent(@Valid @ModelAttribute Student student, BindingResult bindingResult){
+        if(bindingResult.hasErrors()){
+            System.out.println(bindingResult);
+            return "create_student";
+        }
         studentService.saveStudent(student);
         return "redirect:/students";
     }

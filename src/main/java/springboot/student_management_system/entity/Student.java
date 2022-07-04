@@ -1,6 +1,7 @@
 package springboot.student_management_system.entity;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 
 @Entity
 @Table(name="students")
@@ -11,12 +12,15 @@ public class Student {
     private Long id;
 
     @Column(name="first_name", nullable = false)
+    @NotBlank(message = "first name is mandatory.")
     private String firstName;
 
     @Column(name="last_name")
+    @NotBlank(message = "last name is mandatory.")
     private String lastName;
 
     @Column(name="email")
+    @NotBlank(message = "email is mandatory.")
     private String email;
 
     public Student() {

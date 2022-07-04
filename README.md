@@ -4,7 +4,6 @@ SPRING BOOT + BOOTSTRAP + THYMELEAF
 
 A simple Student Management System web application built using
     1. Spring Boot
-
     2. Spring MVC
     3. Bootstrap
     4. Thymeleaf

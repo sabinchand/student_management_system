@@ -11,7 +11,7 @@ A simple Student Management System web application built using:
     7. MySQL
     
     
-Opeartion that can be performed:
+Operations that can be performed:
 
     1. Create the student (C)
     2. Read the student (R)
